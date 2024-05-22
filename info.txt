@@ -1,0 +1,17 @@
+Okay, 
+so For this project i set up a data base, for this project using mongodb + mongoose
+this i export to app.ts where I will initialize the project.
+
+SERVER.ts  -
+this houses the server class where i encapsulate and abstract the methods that i want, its responsible for
+1. setting up Middlware
+    a. Cors - cross site origin handling
+    b. helmet - security protection from common web vulnerabilities by adding security web headers protecs from xss
+        clickjacking etc. csp content security, xss , hides X-powered-by header so wont' get my server info.
+    c. morgan - logger milddelware  http request logger
+    d. hpp - protect from parameter polution attack like ?user=brian&user=ezra?user=susie etc. 
+    e. compression - compresses response body, enables gzip for http responses smaller body = better performance
+        reduced bandwidth, better user experience, use threshold and filter, could cause cpu load
+2. setting up error handling
+3. setting up and starting HTTPServer
+
