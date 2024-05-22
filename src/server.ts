@@ -4,6 +4,7 @@ import cors from 'cors'
 import morgan from 'morgan'
 import './dotenv'
 import helmet from 'helmet'
+import appRoutes from './routes'
 import compression from 'compression'
 import hpp from 'hpp'
 import { errorHandler } from './middleware/errorMiddleware'
@@ -32,9 +33,14 @@ class Server {
         this.app = express()
         this.setupMiddleware()
         this.setupErrorHandling()
+        this.appRoutesMiddleware(app)
     }
     public start(): void {
         this.startHttpServer()
+    }
+
+    private appRoutesMiddleware(app: Application): void {
+        this.app.use(appRoutes)
     }
 
     private setupMiddleware(): void {
