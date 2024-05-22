@@ -5,7 +5,7 @@ class Config {
     public MONGO_ATLAS_PW: string | undefined
     public JWT_KEY: string | undefined
 
-    private readonly DATABASE_URL='mongodb+srv://haack79:' + process.env.MONGO_ATLAS_PW + '@cluster0.4qubeli.mongodb.net/'
+    private readonly 
 
     constructor() {
         this.MONGO_ATLAS_PW = process.env.MONGO_ATLAS_PW
